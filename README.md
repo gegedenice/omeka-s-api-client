@@ -68,10 +68,4 @@ logging.getLogger().setLevel(logging.DEBUG)  # For detailed logging
 
 ## Usage
 
-See examples in notebook
-
-pandas
-numpy
-requests
-pillow
-logging
+See examples in notebooks folder.
