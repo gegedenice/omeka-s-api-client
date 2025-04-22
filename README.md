@@ -18,11 +18,29 @@ A Python client library for interacting with the Omeka S REST API. This client p
 
 ## Installation
 
+### Option 1: Install from GitHub
+
+```bash
+pip install git+https://github.com/gegedenice/omeka-s-api-client.git
+```
+
+### Option 2: Install from source
+
 Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/omeka-s-tools.git
-cd omeka-s-tools
+git clone https://github.com/gegedenice/omeka-s-api-client.git
+cd omeka-s-api-client
+```
+
+Then install the package:
+
+```bash
+# For development installation (editable mode)
+pip install -e .
+
+# Or for regular installation
+pip install .
 ```
 
 ## Configuration
@@ -37,7 +55,7 @@ The client accepts the following initialization parameters:
 ### Basic setup
 
 ```python
-from client.omekaS_client import OmekaSClient
+from omeka_s_client import OmekaSClient
 
 # Initialize the client
 client = OmekaSClient(
@@ -46,6 +64,7 @@ client = OmekaSClient(
     key_credential="your-key-credential"
 )
 ```
+
 ### Error Handling
 
 The client includes a custom OmekaSClientError exception class for error handling:
