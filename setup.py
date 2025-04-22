@@ -12,7 +12,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/gegedenice/omeka-s-api-client",
-    packages=find_packages(include=['omeka_s_client', 'omeka_s_client.*']),
+    packages=find_packages(include=['omeka_s_api_client', 'omeka_s_api_client.*']),
     include_package_data=True,
     classifiers=[
         "Development Status :: 4 - Beta",

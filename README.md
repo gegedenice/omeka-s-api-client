@@ -55,7 +55,7 @@ The client accepts the following initialization parameters:
 ### Basic setup
 
 ```python
-from omeka_s_client import OmekaSClient
+from omeka_s_api_client import OmekaSClient
 
 # Initialize the client
 client = OmekaSClient(
