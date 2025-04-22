@@ -153,13 +153,17 @@ class OmekaSClient:
         kwargs.pop('page', None)
         kwargs.pop('limit', None) # Ignore limit, as we fetch all
         current_params = self._build_params(per_page=effective_per_page, **kwargs)
+        
+        # Create a sanitized version of params for logging
+        logging_params = {k: v for k, v in current_params.items() 
+                        if k not in ('key_identity', 'key_credential')}
 
         current_url = f"{self.api_url}/{api_endpoint}"
         logging.info(f"Starting full fetch for endpoint '{api_endpoint}' with initial params: {kwargs}")
 
         while current_url:
             page_count += 1
-            logging.info(f"Fetching page {page_count} from: {current_url} with params: {current_params}")
+            logging.info(f"Fetching page {page_count} from: {current_url} with params: {logging_params}")
             response = self._request('GET', current_url, params=current_params) # Pass params here
             try:
                 data = response.json()
