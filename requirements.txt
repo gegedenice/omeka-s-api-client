@@ -1,0 +1,7 @@
+pandas
+numpy
+requests
+pillow
+logging
+datasets
+huggingface_hub
