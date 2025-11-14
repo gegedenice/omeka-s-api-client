@@ -75,7 +75,7 @@ class OmekaSClient:
     def _request(self, method, url, params=None, **kwargs):
         """Makes an HTTP request to the Omeka S API."""
         try:
-            response = requests.request(method, url, headers=self.headers, params=params, **kwargs)
+            response = requests.request(method, url, headers=self.headers, params=params, **kwargs, verify=False)
             response.raise_for_status() # Check for 4xx/5xx errors
             return response
         except requests.exceptions.RequestException as e:
